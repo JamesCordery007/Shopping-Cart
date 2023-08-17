@@ -58,6 +58,22 @@ input[type=text] {
   border-radius: 3px;
 }
 
+input[type=email] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type=tel] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
 label {
   margin-bottom: 10px;
   display: block;
@@ -125,29 +141,38 @@ span.price {
           <div class="col-50">
             <h3>Billing Address</h3>
             <label for="fname"> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
-            <label for="email"> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com" required>
+            <input type="text" id="fname" name="firstname" placeholder="" required>
+
+            <div class="row">
+              <div class="col-50">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="" required>
+              </div>
+              <div class="col-50">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+              </div>
+            </div>
             <label for="adr"> Address Line 1</label>
-            <input type="text" id="adr" name="address" placeholder="100 East Road" required>
-            <label for="adr"> Address Line 2</label>
-            <input type="text" id="adr" name="address" placeholder="100 East Road" >
+            <input type="text" id="adr" name="address" placeholder="" required>
+            <label for="adr"> Address Line 2 (optional)</label>
+            <input type="text" id="adr" name="address" placeholder="" >
             <label for="city"> Town</label>
-            <input type="text" id="city" name="town" placeholder="Cambridge" required>
+            <input type="text" id="city" name="town" placeholder="" required>
 
             <div class="row">
               <div class="col-50">
                 <label for="state">County</label>
-                <input type="text" id="state" name="county" placeholder="Cambridgeshire">
+                <input type="text" id="state" name="county" placeholder="">
               </div>
               <div class="col-50">
                 <label for="zip">Post Code</label>
-                <input type="text" id="zip" name="postcode" placeholder="CB1 2PE" required>
+                <input type="text" id="zip" name="postcode" placeholder="" required>
               </div>
             </div>
           </div>
 
-          
+          <!--
           <div class="col-50">
             <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
@@ -174,12 +199,14 @@ span.price {
               </div>
             </div>
           </div>
-         
+         -->
         </div>
+        <!--
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <input type="submit" value="Checkout" class="btn">
+        -->
+        <input type="submit" value="Continue To Payment" class="btn">
       </form>
     </div>
   </div>
