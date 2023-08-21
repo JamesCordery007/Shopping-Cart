@@ -140,8 +140,17 @@ span.price {
         <div class="row">
           <div class="col-50">
             <h3>Billing Address</h3>
-            <label for="fname"> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="" required>
+            
+            <div class="row">
+              <div class="col-50">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="" required>
+              </div>
+              <div class="col-50">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="" required>
+              </div>
+            </div>
 
             <div class="row">
               <div class="col-50">
@@ -157,16 +166,16 @@ span.price {
             <input type="text" id="adr" name="address" placeholder="" required>
             <label for="adr"> Address Line 2 (optional)</label>
             <input type="text" id="adr" name="address" placeholder="" >
-            <label for="city"> Town</label>
+            <label for="city"> Town / City</label>
             <input type="text" id="city" name="town" placeholder="" required>
 
             <div class="row">
               <div class="col-50">
-                <label for="state">County</label>
+                <label for="state">County / State</label>
                 <input type="text" id="state" name="county" placeholder="">
               </div>
               <div class="col-50">
-                <label for="zip">Post Code</label>
+                <label for="zip">Post / Zip Code</label>
                 <input type="text" id="zip" name="postcode" placeholder="" required>
               </div>
             </div>
