@@ -1,31 +1,6 @@
-/* Common styles for all pages */
-
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
-
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav ul li a {
-    color:#f9f9f9;
-}
-
-/* Product page specific styles */
 
 .product-list {
     display: flex;
@@ -46,8 +21,6 @@ nav ul li a {
     padding: 5px 10px;
     cursor: pointer;
 }
-
-/* Checkout page specific styles */
 
 .cart {
     margin: 20px;
@@ -99,3 +72,4 @@ nav ul li a {
     padding: 10px 20px;
     cursor: pointer;
 }
+

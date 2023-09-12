@@ -29,7 +29,6 @@ function addToOrder() {
 
     // Calculate the total amount from the cart
     const savedTotalAmount = localStorage.getItem('totalAmount');
-
     if (savedTotalAmount) {
         document.getElementById('checkoutTotalAmount').textContent = savedTotalAmount;
     }
@@ -65,14 +64,14 @@ function buyNow() {
         method: 'POST',
         body: formData,
     })
-        .then(response => response.text())
-        .then(data => {
-            // Handle the response from the PHP script
-            console.log(data);
-            // Redirect to the URL received from the post request
-           // window.location.href = data; // Assuming the URL is returned as a response
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+    .then(response => response.text())
+    .then(data => {
+        // Handle the response from the PHP script
+        console.log(data);
+        // You can redirect to a thank you page or perform further actions here
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
+

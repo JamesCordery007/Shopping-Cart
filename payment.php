@@ -1,10 +1,7 @@
 <?php
 
-// Basic Auth credentials
 $username = 'iuospcpc0onok906'; // Basic Auth username
 $password = 'tf5zohhzsl7erll1prui7pz12d2tzq6q09g2bfqwajah1qicc3fmnnhqfq72m0bi'; // Basic Auth password
-
-// Worldpay URL
 $url = 'https://try.access.worldpay.com/payment_pages';
 
 // Retrieve address details from the checkout page
@@ -15,15 +12,12 @@ $town = $_POST['town'];
 $county = $_POST['county'];
 $postcode = $_POST['postcode'];
 
-// Calculate the total amount from the checkout page and convert to pence (two added zeros)
-$totalAmount = floatval($_POST['totalAmount']) * 100;
-
-// Generate a unique transaction reference
-$transactionReference = generateTransactionReference();
+// Calculate the total amount from the checkout page
+$totalAmount = $_POST['totalAmount'];
 
 // JSON data
 $jsonData = array(
-    "transactionReference" => $transactionReference,
+    "transactionReference" => "Memory265-13/08/1876",
     "merchant" => array(
         "entity" => "MindPalaceLtd"
     ),
@@ -77,12 +71,5 @@ if (curl_errno($ch)) {
 // Close cURL session
 curl_close($ch);
 
-// Function to generate a unique transaction reference
-function generateTransactionReference() {
-    // Generate a timestamp-based reference combined with a random number
-    $timestamp = time();
-    $randomNumber = mt_rand(1000, 9999); // Adjust the range as needed
-    return "Memory{$timestamp}-{$randomNumber}";
-}
-
 ?>
+
