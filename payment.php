@@ -26,7 +26,7 @@ $jsonData = array(
     ),
     "value" => array(
         "currency" => "GBP",
-        "amount" => $totalAmount
+        "amount" => $totalAmount*100
     ),
     // Add address details
     "address" => array(
