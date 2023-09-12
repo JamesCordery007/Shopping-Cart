@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Index Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Product Page</h1>
-    <div class="product" id="product1">
-        <h2>Product 1</h2>
-        <p>Price: £10</p>
-        <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
-    </div>
-    <div class="product" id="product2">
-        <h2>Product 2</h2>
-        <p>Price: £15</p>
-        <button onclick="addToCart('Product 2', 15.00)" >Add to Cart</button>
-    </div>
-    <div class="product" id="product3">
-        <h2>Product 3</h2>
-        <p>Price: £20</p>
-        <button onclick="addToCart('Product 3', 20.00)" step=>Add to Cart</button>
-    </div>
-    <button id="checkoutButton" onclick="goToCheckout()">Go to Checkout</button>
 
-    <div id="cartSummary">
-        <h2>Cart Summary</h2>
-        <p>Total Amount: £<span id="totalAmount">0.00</span></p>
-        <ul id="cartItems">
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
         </ul>
-    </div>
+    </nav>
+
+    <h1>Welcome to our Website</h1>
+    <!-- ... rest of your index page content ... -->
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>

@@ -1,39 +1,86 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Checkout Page</title>
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
+
+        <!-- Navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+
     <h1>Checkout Page</h1>
+
     <h2>Your Cart</h2>
+
     <ul id="checkoutCart">
+
     </ul>
+
     <p>Total Amount: £<span id="checkoutTotalAmount">0</span></p>
-    
+
+   
+
     <h2>Shipping Information</h2>
+
     <form id="shippingForm">
+
         <label for="name">Name:</label>
+
         <input type="text" id="name" required><br>
+
         <label for="address1">Address 1:</label>
+
         <input type="text" id="address1" required><br>
+
         <label for="address2">Address 2:</label>
+
         <input type="text" id="address2"><br>
+
         <label for="town">Town:</label>
+
         <input type="text" id="town" required><br>
+
         <label for="county">County:</label>
+
         <input type="text" id="county" required><br>
+
         <label for="postcode">Postcode:</label>
+
         <input type="text" id="postcode" required><br>
+
     </form>
-    
+
+   
+
     <button id="addToOrderButton" onclick="addToOrder()">Add Address and Calculate Total</button>
+
     <button id="buyNowButton" onclick="buyNow()" disabled>Buy Now</button>
 
+ 
+
     <script src="script.js"></script>
+
     <script src="checkout.js"></script>
+
 </body>
+
 </html>
 
+ 
