@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="styles.css">
+   
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 	<style>
 		.left-panel{
 			float:left;
 			width:50%;
 			margin-left:5%;
+			
 		}
 
 		.right-panel{
@@ -23,12 +24,16 @@
 			text-align:center;
 			font-family: "Lobster", serif;
 			font-size:50px;
+			
+			margin-top:0;
+			margin-bottom:1%;
 		}
 
 		.product {
 			border: 1px solid #ccc;
-			border-color:#4CAF50;
-			padding: 10px;
+			border-color:red;
+			margin: 8px;
+			padding-bottom:10px;
 			text-align: center;
 		}
 
@@ -36,8 +41,12 @@
 			margin-bottom: 20px;
 			padding: 10px;
 			border: 1px solid;
-			border-color:#4CAF50;
-			background-color: #f9f9f9;
+			border-color: red;
+			
+		}
+		
+		img{
+			margin: 1% 0% 0% 5%;
 		}
 		
 		#checkoutButton{
@@ -54,7 +63,7 @@
 			cursor: pointer;
 			background-color: white; 
 			color: black; 
-			border: 2px solid #4CAF50;
+			border: 2px solid red;
 		}
 		
 		#checkoutButton:hover {
@@ -64,6 +73,11 @@
 	</style>
 </head>
 <body>
+
+	<div class="header">
+		<img src="assets/worldpay-logo.png" alt="Worldpay logo" width="200" height="70">
+	</div>
+	
 	<h1 class="title">Product Page</h1>
 	<div class="left-panel">
     
