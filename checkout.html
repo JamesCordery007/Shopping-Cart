@@ -4,16 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
-    <link rel="stylesheet" href="styles.css">
+    
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	<style>
+		.left-panel{
+			float:left;
+			width:50%;
+			margin-left:5%;
+		}
+
+		.right-panel{
+			float:right;
+			width:25%;
+			margin-right:10%;
+			margin-top:4%;
+		}
+		
+		.title{
+			text-align:center;
+			font-family: "Lobster", serif;
+			font-size:50px;
+		}
+
+		.product {
+			border: 1px solid #ccc;
+			border-color:#4CAF50;
+			padding: 10px;
+			text-align: center;
+		}
+
+		#cartSummary {
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid;
+			border-color:#4CAF50;
+			background-color: 
+		}
+		
+		#checkoutButton{
+			
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			transition-duration: 0.4s;
+			cursor: pointer;
+			background-color: white; 
+			color: black; 
+			border: 2px solid #4CAF50;
+		}
+		
+		#checkoutButton:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+		
+		input[type=text] {
+		  width: 100%;
+		  padding: 6px 10px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		  border: 3px solid #ccc;
+		  -webkit-transition: 0.5s;
+		  transition: 0.5s;
+		  outline: none;
+		}
+
+		input[type=text]:focus {
+		  border: 3px solid #555;
+		}
+		
+		#shippingInfo{
+			font-size:20px;
+		}
+		
+		button{
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			transition-duration: 0.4s;
+			cursor: pointer;
+			background-color: white; 
+			color: black; 
+			border: 2px solid #4CAF50;
+		}
+		
+		button:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+		
+		button:disabled,
+			button[disabled]{
+			border: 1px solid #999999;
+			background-color: #cccccc;
+			color: #666666;
+		}
+		
+	</style>
 </head>
 <body>
-    <h1>Checkout Page</h1>
-    <h2>Your Cart</h2>
-    <ul id="checkoutCart">
-    </ul>
-    <p>Total Amount: £<span id="checkoutTotalAmount">0</span></p>
-    
-    <h2>Shipping Information</h2>
+    <h1  class="title">Checkout Page</h1>
+	
+	
+	<div class="left-panel">
+    <h2 id="shippingInfo">Shipping Information</h2>
     <form id="shippingForm">
         <label for="name">Name:</label>
         <input type="text" id="name" required><br>
@@ -29,9 +133,21 @@
         <input type="text" id="postcode" required><br>
     </form>
     
-    <button id="addToOrderButton" onclick="addToOrder()">Add Address and Calculate Total</button>
-    <button id="buyNowButton" onclick="buyNow()" disabled>Buy Now</button>
-
+	</div>
+	
+	<div class="right-panel" >
+		<div id="cartSummary">
+			<h2>Cart Summary</h2>
+			<ul id="checkoutCart">
+			</ul>
+			<p>Total Amount: £<span id="checkoutTotalAmount">0</span></p>
+		</div>
+		<button id="addToOrderButton" onclick="addToOrder()">Add Address and Calculate Total</button>
+		<br>
+		<button id="buyNowButton" onclick="buyNow()" disabled>Buy Now</button>
+    </div>
+	
+	
     <script src="script.js"></script>
     <script src="checkout.js"></script>
 </body>

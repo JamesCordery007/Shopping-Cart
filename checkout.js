@@ -35,7 +35,11 @@ function addToOrder() {
 
     // Enable the "Buy Now" button
     document.getElementById('buyNowButton').removeAttribute('disabled');
+	
+	
+	document.getElementById('addToOrderButton').disabled=true;
 }
+
 
 function buyNow() {
     // Gather shipping information
@@ -65,9 +69,11 @@ function buyNow() {
         body: formData,
     })
     .then(response => response.text())
+	
     .then(data => {
         // Handle the response from the PHP script
-        console.log(data);
+		
+		console.log(data);
         // You can redirect to a thank you page or perform further actions here
     })
     .catch(error => {

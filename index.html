@@ -4,10 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="styles.css">
+   
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	<style>
+		.left-panel{
+			float:left;
+			width:50%;
+			margin-left:5%;
+			
+		}
+
+		.right-panel{
+			float:right;
+			width:25%;
+			margin-right:10%;
+		}
+		
+		.title{
+			text-align:center;
+			font-family: "Lobster", serif;
+			font-size:50px;
+			
+			margin-top:0;
+			margin-bottom:1%;
+		}
+
+		.product {
+			border: 1px solid #ccc;
+			border-color:red;
+			margin: 8px;
+			padding-bottom:10px;
+			text-align: center;
+		}
+
+		#cartSummary {
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid;
+			border-color: red;
+			
+		}
+		
+		img{
+			margin: 1% 0% 0% 5%;
+		}
+		
+		#checkoutButton{
+			
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			transition-duration: 0.4s;
+			cursor: pointer;
+			background-color: white; 
+			color: black; 
+			border: 2px solid red;
+		}
+		
+		#checkoutButton:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+	</style>
 </head>
 <body>
-    <h1>Product Page</h1>
+
+	<div class="header">
+		<img src="assets/worldpay-logo.png" alt="Worldpay logo" width="200" height="70">
+	</div>
+	
+	<h1 class="title">Product Page</h1>
+	<div class="left-panel">
+    
     <div class="product" id="product1">
         <h2>Product 1</h2>
         <p>Price: £10</p>
@@ -23,13 +96,17 @@
         <p>Price: £20</p>
         <button onclick="addToCart('Product 3', 20.00)" step=>Add to Cart</button>
     </div>
-    <button id="checkoutButton" onclick="goToCheckout()">Go to Checkout</button>
-
-    <div id="cartSummary">
+    
+	</div>
+	
+    <div class ="right-panel" >
+		<div id="cartSummary" >
         <h2>Cart Summary</h2>
-        <p>Total Amount: £<span id="totalAmount">0.00</span></p>
         <ul id="cartItems">
         </ul>
+		<p>Total Amount: £<span id="totalAmount">0.00</span></p>
+		</div>
+		<button id="checkoutButton" onclick="goToCheckout()">Go to Checkout</button>
     </div>
 
     <script src="script.js"></script>
