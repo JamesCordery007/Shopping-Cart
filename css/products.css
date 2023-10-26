@@ -1,0 +1,38 @@
+/* styles.css */
+.image-text-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    }
+
+.text-content {
+    resize: both;
+    overflow: auto;
+    min-height: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+header {
+    background-color: #080808;
+    color: white;
+    padding: 0px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: inline; /* Display links inline */
+    margin:  10px; /* Add horizontal spacing between links */
+    
+}
+
+#mainBody p {
+    color: #f70606; /* Change to your desired text color */
+    font-size: 18px; /* Change to your desired font size */
+}
