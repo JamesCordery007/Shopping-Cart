@@ -16,6 +16,7 @@ if (!isset($_SESSION["username"])) {
 }
 ?>
 
+
 <header>
     <div id="navbar">
         <?php include 'navbar\adminNavbar.html'; ?>
@@ -30,6 +31,11 @@ if (!isset($_SESSION["username"])) {
     <textarea id="textContent" rows="10" cols="50"></textarea>
     <br>
     <button type="submit">Save Text</button>
+</form>
+
+<!-- Add a Logout button -->
+<form action="logout.php" method="post">
+    <button type="submit">Logout</button>
 </form>
 
 <!-- Email update form -->
